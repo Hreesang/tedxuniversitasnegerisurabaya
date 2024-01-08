@@ -6,6 +6,7 @@ import Introduction from '@/components/Introduction';
 import Speaker from '@/components/Speaker';
 import DatePlace from '@/components/DatePlace';
 import DatePlaceBgImage from '@/components/DatePlaceBgImage';
+import MainEvent from '@/components/MainEvent';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <Speaker />
       <DatePlace />
       <DatePlaceBgImage />
+      <MainEvent />
     </Box>
   );
 }

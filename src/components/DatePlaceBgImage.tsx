@@ -2,7 +2,7 @@ import { Box, Image } from '@chakra-ui/react';
 
 export default function DatePlaceBgImage() {
   return (
-    <Box position="relative">
+    <Box position="relative" bgColor="transparent">
       <Image
         alt="Background Image"
         src="/date-place/background-image.png"
