@@ -18,6 +18,7 @@ export default function MainEvent() {
       backgroundColor="#9E2B25"
       pt="3.5em"
       pb="3.5em"
+      position="relative"
     >
       <BackgroundShape />
       <Title />
@@ -39,7 +40,7 @@ const Title = () => {
 };
 
 const Counter = () => {
-  const eventTimeStr = '10 February, 2024 at 15:00';
+  const eventTimeStr = '10 February, 2024 at 15:00 WIB';
   dayjs.extend(customParseFormat);
 
   interface ITimeDifferent {
@@ -218,14 +219,25 @@ const VideoPlayer = () => {
 
 const BackgroundShape = () => {
   return (
-    <Image
-      alt="Shape"
-      src="/main-event/background-shape.png"
-      position="absolute"
-      transform="scaleX(-1)"
-      bottom={{ base: '0', md: '15em' }}
-      width={{ base: 'unset', md: '40%' }}
-      right={{ base: 'unset', md: '0' }}
-    />
+    <>
+      <Image
+        alt="Shape"
+        src="/main-event/background-shape.png"
+        position="absolute"
+        transform="scaleX(-1)"
+        bottom={{ base: '0', md: '15em' }}
+        width={{ base: 'unset', md: '40%' }}
+        right={{ base: 'unset', md: '0' }}
+      />
+      <Image
+        alt="Shape"
+        src="/main-event/background-shape.png"
+        position="absolute"
+        display={{ base: 'none', md: 'unset' }}
+        bottom="15em"
+        width="40%"
+        left="0"
+      />
+    </>
   );
 };
