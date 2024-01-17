@@ -7,6 +7,7 @@ import Speaker from '@/components/Speaker';
 import DatePlace from '@/components/DatePlace';
 import DatePlaceBgImage from '@/components/DatePlaceBgImage';
 import MainEvent from '@/components/MainEvent';
+import Merch from '@/components/Merch';
 import FaQ from '@/components/FaQ';
 import Partnership from '@/components/Partnership';
 import Footer from '@/components/Footer';
@@ -21,6 +22,7 @@ export default function App() {
       <DatePlace />
       <DatePlaceBgImage />
       <MainEvent />
+      <Merch />
       <FaQ />
       <Partnership />
       <Footer />
