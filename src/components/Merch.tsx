@@ -6,6 +6,7 @@ import {
   Flex,
   Icon,
   Button,
+  Link,
 } from '@chakra-ui/react';
 import Slider, { type Settings as SliderSettings } from 'react-slick';
 import { FaArrowRightLong } from 'react-icons/fa6';
@@ -262,13 +263,15 @@ const OrderSection = () => {
         >
           Order now to get the limited-offer merch bundle at a special price
         </Text>
-        <Button
-          size={{ base: 'sm', md: 'lg' }}
-          textColor="#9E2B25"
-          fontSize={{ base: 'xs', md: 'lg' }}
-        >
-          Order Here <Icon as={FaArrowRightLong} ml="0.75em" />
-        </Button>
+        <Link href="https://bit.ly/tedxtiketpawanaterbungkam" isExternal>
+          <Button
+            size={{ base: 'sm', md: 'lg' }}
+            textColor="#9E2B25"
+            fontSize={{ base: 'xs', md: 'lg' }}
+          >
+            Order Here <Icon as={FaArrowRightLong} ml="0.75em" />
+          </Button>
+        </Link>
       </Box>
     </Box>
   );
