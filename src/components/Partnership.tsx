@@ -34,20 +34,14 @@ const Title = () => {
 const PartnerInfo = () => {
   const partners = [
     {
-      imgSrc: '/partner/intel.png',
-      title: 'Intel',
+      imgSrc: '/partner/wardah.png',
+      title: 'Wardah',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore',
     },
     {
-      imgSrc: '/partner/tmp.png',
-      title: 'Predator',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore',
-    },
-    {
-      imgSrc: '/partner/tmp.png',
-      title: 'Predator',
+      imgSrc: '/partner/rakyatuku.png',
+      title: 'Rakyatuku',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore',
     },
@@ -67,13 +61,17 @@ const PartnerInfo = () => {
           <Flex
             key={`partnership-${idx}`}
             flexDir={isEven ? 'row-reverse' : 'row'}
-            gap="1em"
+            gap={{ base: '1em', md: '2em' }}
             alignItems="center"
           >
             <Image
               alt={partner.title}
               src={partner.imgSrc}
-              boxSize={{ base: '7em', md: '9em' }}
+              width={{ base: '8em', md: '12em' }}
+              padding="0.5em"
+              bgColor="#FFF8F0"
+              borderRadius="md"
+              border="1px"
             />
             <Box>
               <Heading

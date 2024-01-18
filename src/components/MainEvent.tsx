@@ -128,8 +128,8 @@ const Counter = () => {
       flexDir="column"
       w="100%"
       textColor="white"
-      gap={{ base: '1.5em', md: '5em' }}
-      mt={{ base: '1.5em', md: '5em' }}
+      gap={{ base: '1.5em', md: '3em' }}
+      mt={{ base: '1.5em', md: '3em' }}
     >
       <Text
         textAlign="center"

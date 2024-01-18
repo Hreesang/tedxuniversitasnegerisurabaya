@@ -1,10 +1,8 @@
 import { Flex, Image } from '@chakra-ui/react';
 
 const partners = [
-  { name: 'Intel', imageSrc: '/partner/intel.png' },
-  { name: 'Intel', imageSrc: '/partner/intel.png' },
-  { name: 'Intel', imageSrc: '/partner/intel.png' },
-  { name: 'Intel', imageSrc: '/partner/intel.png' },
+  { name: 'Wardah', imageSrc: '/partner/wardah.png' },
+  { name: 'Rakyatuku', imageSrc: '/partner/rakyatuku.png' },
 ];
 
 export default function Partner() {
@@ -34,5 +32,14 @@ interface EachPartnerProps {
 const EachPartner = (props: EachPartnerProps) => {
   const { name, imageSrc } = props;
 
-  return <Image alt={name} src={imageSrc} width="2.5em" />;
+  return (
+    <Image
+      alt={name}
+      src={imageSrc}
+      width={{ base: '5em', md: '7.5em' }}
+      padding="0.5em"
+      bgColor="white"
+      borderRadius="md"
+    />
+  );
 };

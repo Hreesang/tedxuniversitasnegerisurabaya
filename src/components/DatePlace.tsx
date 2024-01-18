@@ -70,8 +70,9 @@ const ImageSlider = () => {
     swipe: true,
     touchMove: true,
     autoplay: true,
+    autoplaySpeed: 5000,
     speed: 500,
-    lazyLoad: 'ondemand',
+    lazyLoad: 'anticipated',
   };
 
   const images = [
