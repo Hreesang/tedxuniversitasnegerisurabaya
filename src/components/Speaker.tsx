@@ -188,9 +188,9 @@ const FaceBackground = () => {
 
 const PreEvent = () => {
   const preEvents = [
-    { title: 'Pre Event', date: 'OCT 13, 2023' },
-    { title: 'FSS', date: 'OCT 13, 2023' },
-    { title: 'RTF', date: 'OCT 13, 2023' },
+    { title: 'Pre Event 1', date: 'SEP 19, 2023' },
+    { title: 'FSS', date: 'SEP 23, 2023' },
+    { title: 'Pre Event 2', date: 'DEC 09, 2023' },
   ];
 
   return (

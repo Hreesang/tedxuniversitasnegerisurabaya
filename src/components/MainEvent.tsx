@@ -9,6 +9,8 @@ import {
 } from '@chakra-ui/react';
 import dayjs from 'dayjs';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
+import utc from 'dayjs/plugin/utc';
+import timezone from 'dayjs/plugin/timezone';
 import { useEffect, useState } from 'react';
 
 export default function MainEvent() {
@@ -40,8 +42,10 @@ const Title = () => {
 };
 
 const Counter = () => {
-  const eventTimeStr = '10 February, 2024 at 15:00 WIB';
+  const eventTimeStr = 'February 3, 2024 at 08:00 WIB';
   dayjs.extend(customParseFormat);
+  dayjs.extend(utc);
+  dayjs.extend(timezone);
 
   interface ITimeDifferent {
     totalInSecond: number;
@@ -62,7 +66,9 @@ const Counter = () => {
   useEffect(() => {
     const tid = setInterval(() => {
       const getTimeDiff = (): ITimeDifferent => {
-        const eventDate = dayjs(eventTimeStr, 'DD MMMM, YYYY at hh:mm');
+        const eventDate = dayjs(eventTimeStr, 'MMMM D, YYYY at hh:mm').tz(
+          'Asia/Jakarta'
+        );
         const nowDate = dayjs();
         const diffInSec = eventDate.diff(nowDate, 'second');
 
@@ -209,10 +215,11 @@ const VideoPlayer = () => {
       mt={{ base: '3em', md: '7em' }}
     >
       <iframe
-        title="TedxUniversitasNegeriSurabaya"
-        src="https://www.youtube.com/embed/q-Y0bnx6Ndw?si=DAuVwYMbH3qA1LBQ"
-        allowFullScreen
-      />
+        src="https://drive.google.com/file/d/1xDIlol1nJXmGGWLgqdA1cvkdYXQJpFRm/preview"
+        width="640"
+        height="480"
+        allow="autoplay"
+      ></iframe>
     </AspectRatio>
   );
 };

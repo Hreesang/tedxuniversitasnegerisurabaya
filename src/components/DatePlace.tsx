@@ -51,9 +51,12 @@ const Description = () => {
       margin="auto"
       textAlign="justify"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+      On February 3, 2024, TEDxUniversitasNegeriSurabaya will host a captivating
+      event starting at 08:00 AM WIB at the Auditorium T2, Faculty of Language
+      and Arts, Universitas Negeri Surabaya. Join us for an inspiring day of
+      thought-provoking talks and discussions that promise to spark ideas and
+      ignite change. Don't miss the opportunity to be part of this intellectual
+      gathering at one of Surabaya's esteemed university venues.
     </Text>
   );
 };
@@ -67,21 +70,26 @@ const ImageSlider = () => {
     infinite: true,
     swipe: true,
     touchMove: true,
+    autoplay: true,
+    speed: 500,
   };
 
   const images = [
-    { alt: 'Temporary', src: '/date-place/images/tmp.png' },
-    { alt: 'Temporary', src: '/date-place/images/tmp.png' },
-    { alt: 'Temporary', src: '/date-place/images/tmp.png' },
-    { alt: 'Temporary', src: '/date-place/images/tmp.png' },
-    { alt: 'Temporary', src: '/date-place/images/tmp.png' },
-    { alt: 'Temporary', src: '/date-place/images/tmp.png' },
-    { alt: 'Temporary', src: '/date-place/images/tmp.png' },
+    { alt: 'Behind The Scene 1', src: '/prev/season-1/bts-1.jpg' },
+    { alt: 'Behind The Scene 2', src: '/prev/season-1/bts-2.jpg' },
+    { alt: 'Behind The Scene 3', src: '/prev/season-1/bts-3.jpg' },
+    { alt: 'Behind The Scene 4', src: '/prev/season-1/bts-4.jpg' },
+    { alt: 'Behind The Scene 5', src: '/prev/season-1/bts-5.jpg' },
+    { alt: 'Behind The Scene 6', src: '/prev/season-1/bts-6.jpg' },
+    { alt: 'Behind The Scene 7', src: '/prev/season-1/bts-7.jpg' },
+    { alt: 'Behind The Scene 8', src: '/prev/season-1/bts-8.jpg' },
+    { alt: 'Behind The Scene 9', src: '/prev/season-1/bts-9.jpg' },
+    { alt: 'Behind The Scene 10', src: '/prev/season-1/bts-10.jpg' },
   ];
 
   return (
     <Box
-      width={{ base: '60%', md: '25em' }}
+      width={{ base: '80%', md: '32em' }}
       margin="auto"
       mb="1.5em"
       zIndex="2"

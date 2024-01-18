@@ -10,12 +10,6 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-const introImages = [
-  { name: 'Temporary', imageSrc: '/intro/tmp.png' },
-  { name: 'Temporary', imageSrc: '/intro/tmp.png' },
-  { name: 'Temporary', imageSrc: '/intro/tmp.png' },
-];
-
 export default function Introduction() {
   return (
     <Box
@@ -41,18 +35,43 @@ const ImageSlider = () => {
     infinite: true,
     swipe: true,
     touchMove: true,
+    autoplay: true,
+    speed: 500,
   };
 
+  const images = [
+    {
+      alt: 'Ayukta Thakur Panjabi',
+      src: '/prev/season-1/ayukta-thakur-panjabi.jpg',
+    },
+    {
+      alt: 'Azizatul Munawwaroh',
+      src: '/prev/season-1/azizatul-munawwaroh.jpg',
+    },
+    {
+      alt: 'Donny Ardi Kusuma',
+      src: '/prev/season-1/donny-ardi-kusuma.jpg',
+    },
+    {
+      alt: 'Ifandi Khainur Rahim',
+      src: '/prev/season-1/ifandi-khainur-rahim.jpg',
+    },
+    { alt: 'Vina Maulina', src: '/prev/season-1/vina-maulina.jpg' },
+  ];
+
   return (
-    <Flex width="100%" justifyContent="center" alignItems="center">
-      <Box width={{ base: '60%', md: '25em' }}>
-        <Slider {...sliderSettings}>
-          {introImages.map(({ name, imageSrc }, idx) => (
-            <Image key={`intro-img-${idx}`} alt={name} src={imageSrc} />
-          ))}
-        </Slider>
-      </Box>
-    </Flex>
+    <Box
+      width={{ base: '80%', md: '35em' }}
+      margin="auto"
+      mb="1.5em"
+      zIndex="2"
+    >
+      <Slider {...sliderSettings}>
+        {images.map(({ alt, src }, idx) => (
+          <Image key={`date-place-img-${idx}`} alt={alt} src={src} />
+        ))}
+      </Slider>
+    </Box>
   );
 };
 

@@ -157,7 +157,12 @@ const Item = ({ title, isSoldOut, isOpen, items }: ItemProps) => {
   }, [isMobile]);
 
   return (
-    <Box textAlign="center" width={{ base: '100%', md: '25em' }} mx="auto">
+    <Box
+      textAlign="center"
+      width={{ base: '100%', md: '25em' }}
+      mx="auto"
+      mb={{ base: 'unset', md: '1em' }}
+    >
       <Heading
         mb="0.5em"
         fontSize={{ base: 'xl', md: '3xl' }}
@@ -170,7 +175,7 @@ const Item = ({ title, isSoldOut, isOpen, items }: ItemProps) => {
           <Box
             key={`merch-${title}-itm-${idx}`}
             position="relative"
-            mb={isMobile ? 'unset' : '1em'}
+            mb={isMobile ? 'unset' : '0.5em'}
           >
             <Image
               alt={`${title}-${idx}`}
