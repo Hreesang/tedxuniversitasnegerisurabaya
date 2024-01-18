@@ -6,7 +6,7 @@ import {
   type TextProps,
   Flex,
 } from '@chakra-ui/react';
-import Slider from 'react-slick';
+import Slider, { type Settings as SliderSettings } from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -27,9 +27,8 @@ export default function Introduction() {
 }
 
 const ImageSlider = () => {
-  const sliderSettings = {
+  const sliderSettings: SliderSettings = {
     arrows: false,
-    autoPlay: true,
     dots: true,
     draggable: true,
     infinite: true,
@@ -37,6 +36,7 @@ const ImageSlider = () => {
     touchMove: true,
     autoplay: true,
     speed: 500,
+    lazyLoad: 'ondemand',
   };
 
   const images = [

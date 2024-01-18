@@ -10,7 +10,7 @@ import {
   Image,
   Text,
 } from '@chakra-ui/react';
-import Slider from 'react-slick';
+import Slider, { type Settings as SliderSettings } from 'react-slick';
 
 export default function DatePlace() {
   return (
@@ -62,9 +62,8 @@ const Description = () => {
 };
 
 const ImageSlider = () => {
-  const sliderSettings = {
+  const sliderSettings: SliderSettings = {
     arrows: false,
-    autoPlay: true,
     dots: true,
     draggable: true,
     infinite: true,
@@ -72,6 +71,7 @@ const ImageSlider = () => {
     touchMove: true,
     autoplay: true,
     speed: 500,
+    lazyLoad: 'ondemand',
   };
 
   const images = [
