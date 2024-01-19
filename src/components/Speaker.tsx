@@ -23,7 +23,7 @@ export default function Speaker() {
     >
       <Clouds />
       <Title />
-      <SpeakerImage />
+      {/** <SpeakerImage /> */}
       <Content />
       <FaceBackground />
       <PreEvent />
@@ -41,6 +41,7 @@ const Title = () => {
   );
 };
 
+/*
 const SpeakerImage = () => {
   return (
     <Image
@@ -50,6 +51,7 @@ const SpeakerImage = () => {
     />
   );
 };
+*/
 
 const Content = () => {
   const bgSettings: BoxProps = {
@@ -160,13 +162,13 @@ const Clouds = () => {
         zIndex="-999"
         opacity="0.5"
       />
-      <Image
+      {/**<Image
         position="absolute"
         alt="Clouds"
         src="/speaker/clouds.png"
         top={{ base: '17em', md: '30em' }}
         left={{ base: '10em', md: '50em' }}
-      />
+  />*/}
     </>
   );
 };
