@@ -107,22 +107,19 @@ const ImageSlider = () => {
 const Breakdown = () => {
   const breakdownItems = [
     {
-      title: 'Pre Event',
-      imgSrc: '/date-place/breakdown/tmp.png',
+      title: 'Pre Event 1',
       content:
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis',
+        'TEDxUniversitasNegeriSurabaya ft Rahasia Gadis. “All you need to know in building a brand”. Explore the secrets of successful branding in a dynamic session that delves into the essentials of crafting your own unique personal brand.',
     },
     {
-      title: 'Main Event',
-      imgSrc: '/date-place/breakdown/tmp.png',
+      title: 'Pre Event 2',
       content:
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis',
+        "TEDxUniversitasNegeriSurabaya is on the lookout for student speakers to explore the intersection of science and art in the event themed 'The Science of Art: A Catharsis for Our Struggle in Everyday's Life.' If you're a student with a passion for art's transformative power, seize this opportunity to share your unique perspective on how art becomes a cathartic force in our daily challenges.",
     },
     {
-      title: 'FSS & RTF',
-      imgSrc: '/date-place/breakdown/tmp.png',
+      title: 'Pre Event 3',
       content:
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis',
+        'TEDxUniversitasNegeriSurabaya ft Wardah for an exhilarating Pre-Event centered around sports exploration. Engage in a dynamic and enjoyable fitness experience, encouraging participants to embrace physical activity with enthusiasm. Discover a fresh perspective on exercise and ignite a renewed passion for staying active at this exciting Pre-Event.',
     },
   ];
 
@@ -165,11 +162,6 @@ const Breakdown = () => {
               gap="1em"
               pt="1.25em"
             >
-              <Image
-                alt={item.title}
-                src={item.imgSrc}
-                boxSize={{ base: '7.5em', md: '10em' }}
-              />
               <Text fontSize={{ base: 'xs', md: 'md' }}>{item.content}</Text>
             </AccordionPanel>
           </AccordionItem>

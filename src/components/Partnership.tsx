@@ -37,13 +37,13 @@ const PartnerInfo = () => {
       imgSrc: '/partner/wardah.png',
       title: 'Wardah',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore',
+        'Wardah is a beauty brand that cares and understands the wish of every women to always feel calm and comfortable with their look.',
     },
     {
       imgSrc: '/partner/rakyatuku.png',
       title: 'Rakyatuku',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore',
+        'Your go-to brand for unique custom t-shirts, embodying individuality and community spirit through personalized designs.',
     },
   ];
 
