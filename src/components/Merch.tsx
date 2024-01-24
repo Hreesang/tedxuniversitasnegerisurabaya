@@ -77,14 +77,14 @@ const Items = () => {
   const merchItems: Array<ItemProps> = [
     {
       title: 'Early Bird',
-      isSoldOut: false,
+      isSoldOut: true,
       isOpen: true,
       items: [{ imgSrc: '/merch/items/early-bird.png', price: '85K' }],
     },
     {
       title: 'Presale 1',
       isSoldOut: false,
-      isOpen: false,
+      isOpen: true,
       items: [
         { imgSrc: '/merch/items/djiwa-1.png', price: '99K' },
         { imgSrc: '/merch/items/nava-1.png', price: '109K' },
