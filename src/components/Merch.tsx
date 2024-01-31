@@ -69,6 +69,7 @@ interface ItemProps {
   isOpen: boolean;
   items: Array<{
     imgSrc: string;
+    prevPrice?: string;
     price: string;
   }>;
 }
@@ -86,13 +87,21 @@ const Items = () => {
       isSoldOut: false,
       isOpen: true,
       items: [
-        { imgSrc: '/merch/items/djiwa-1.png', price: '99K' },
-        { imgSrc: '/merch/items/nava-1.png', price: '109K' },
-        { imgSrc: '/merch/items/aksata-1.png', price: '139K' },
-        { imgSrc: '/merch/items/agra-1.png', price: '149K' },
-        { imgSrc: '/merch/items/swara-1.png', price: '119K' },
+        { imgSrc: '/merch/items/djiwa-1.png', prevPrice: '99K', price: '89K' },
+        { imgSrc: '/merch/items/nava-1.png', prevPrice: '109K', price: '99K' },
+        {
+          imgSrc: '/merch/items/aksata-1.png',
+          prevPrice: '139K',
+          price: '129K',
+        },
+        { imgSrc: '/merch/items/agra-1.png', prevPrice: '149K', price: '139K' },
+        {
+          imgSrc: '/merch/items/swara-1.png',
+          prevPrice: '119K',
+          price: '119K',
+        },
       ],
-    },
+    } /*
     {
       title: 'Presale 2',
       isSoldOut: false,
@@ -104,7 +113,7 @@ const Items = () => {
         { imgSrc: '/merch/items/agra-2.png', price: '154K' },
         { imgSrc: '/merch/items/swara-2.png', price: '124K' },
       ],
-    },
+    },*/,
   ];
 
   return (
@@ -201,7 +210,13 @@ const Item = ({ title, isSoldOut, isOpen, items }: ItemProps) => {
               fontSize="sm"
               border="1px"
             >
-              IDR {isOpen ? item.price : '??'}
+              {!isOpen ? (
+                'IDR ??'
+              ) : (
+                <>
+                  IDR {item.prevPrice && <s>{item.prevPrice}</s>} {item.price}
+                </>
+              )}
             </Text>
             {(!isOpen || isSoldOut) && (
               <Text
